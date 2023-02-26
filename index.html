@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>JSFX : TEST</title>
+		<title>JSFX</title>
+		<link rel="stylesheet" href="./index.css" />
 		<style>
 			body {
 				margin: 0;
@@ -17,7 +18,21 @@
 		</style>
 	</head>
 	<body>
+		<div id="uiContainer">
+			<div id="ui">
+				<div id="x"></div>
+				<div id="cameraAngle"></div>
+				<div id="y"></div>
+				<div id="z"></div>
+				<div id="fov"></div>
+				<div id="geometryPoint"></div>
+				<div id="angleX"></div>
+				<div id="angleY"></div>
+				<div id="angleZ"></div>
+			</div>
+		</div>
 		<canvas id="scene"></canvas>
+		<script src="https://webglfundamentals.org/webgl/resources/webgl-lessons-ui.js"></script>
 		<script src="./__tests__/main.ts" type="module"></script>
 	</body>
 </html>

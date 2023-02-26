@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
-		"baseUrl": "./src",
+		"baseUrl": "./src/modules",
 		"paths": {
 			"@core/*": ["core/*"],
-			"@api/*": ["api/*"]
+			"@materials/*": ["materials/*"],
+			"@geometries/*": ["geometries/*"],
+			"@cameras/*": ["cameras/*"]
 		}
 	}
 }

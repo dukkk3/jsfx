@@ -1,9 +1,9 @@
-#include <jsfx.vs.vars>;
-
+uniform mat4 u_world;
+attribute vec4 a_position;
 attribute vec4 a_color;
 varying vec4 v_color;
 
 void main () {
-   gl_Position = uvTransform * position;
+   gl_Position = u_world * a_position;
    v_color = a_color;
 }

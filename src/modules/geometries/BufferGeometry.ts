@@ -1,9 +1,14 @@
-import { AbstractGeometry } from "@core/index";
-import { Float32Attribute } from "@core/webgl/attributes/Float32Attribute";
-import type { Attributes } from "@core/types";
+import { AbstractGeometry, Float32Attribute, Attributes, AbstractAttribute } from "@core";
 
-export class BufferGeometry<T extends Attributes = Attributes> extends AbstractGeometry<T> {
-	constructor(vertices: number[], componentSize: number = 3, dynamicDraw?: boolean, attributes?: T) {
-		super(new Float32Attribute(vertices, componentSize, dynamicDraw), attributes);
+export class BufferGeometry<T extends Attributes = Attributes> extends AbstractGeometry<
+	Float32Attribute,
+	T
+> {
+	constructor(
+		vertices: number[] | number[][] | AbstractAttribute<Float32ArrayConstructor>,
+		componentSize: number = 3,
+		attributes?: T
+	) {
+		super(new Float32Attribute(vertices, componentSize), attributes);
 	}
 }
